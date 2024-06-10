@@ -662,6 +662,7 @@ int whTest_CryptoClientConfig(whClientConfig* config)
         goto exit;
     }
     printf("COUNTER SUCCESS\n");
+
 #ifdef WH_CFG_TEST_VERBOSE
     {
         int32_t  server_rc       = 0;
@@ -681,6 +682,7 @@ int whTest_CryptoClientConfig(whClientConfig* config)
                (int)reclaim_size, (int)reclaim_objects);
     }
 #endif /* WH_CFG_TEST_VERBOSE */
+
     ret = 0;
 exit:
     wc_curve25519_free(curve25519PrivateKey);
